@@ -67,4 +67,4 @@ python3 scripts/fetch_fundamentals.py <TICKER>
 
 ## Dependency
 
-Requires: `pip install yfinance`
+`yfinance` is auto-installed on first run if not already present. No manual setup required.

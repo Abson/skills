@@ -162,20 +162,16 @@ When you mention a stock ticker or ask about a company's financials, Claude auto
 
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) CLI installed
 - Python 3.8+
-- `yfinance` package
 
 ### Steps
 
 ```bash
-# 1. Install the Python dependency
-pip install yfinance
-
-# 2. Clone and copy the skill
+# 1. Clone and copy the skill
 git clone https://github.com/Abson/skills.git
 cp -r skills/stock-diglett ~/.claude/skills/stock-diglett
 
-# 3. Verify the skill is loaded
-# Start Claude Code — stock-diglett should appear in the skill list
+# 2. That's it! Start Claude Code and use the skill
+# Dependencies (yfinance) are auto-installed on first run
 ```
 
 ### Verify Installation

@@ -4,7 +4,12 @@
 import argparse
 import sys
 
-import yfinance as yf
+try:
+    import yfinance as yf
+except ImportError:
+    import subprocess
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "yfinance", "-q"])
+    import yfinance as yf
 
 
 def chart_price(ticker: str, period: str = "3mo", interval: str = "1d",

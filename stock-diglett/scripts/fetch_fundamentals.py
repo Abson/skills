@@ -5,7 +5,12 @@ import argparse
 import json
 import sys
 
-import yfinance as yf
+try:
+    import yfinance as yf
+except ImportError:
+    import subprocess
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "yfinance", "-q"])
+    import yfinance as yf
 
 
 def safe_get(d: dict, *keys):
